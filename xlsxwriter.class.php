@@ -787,7 +787,7 @@ class XLSXWriter
 	private static function numberFormatStandardized($num_format)
 	{
 		if ($num_format=='money') { $num_format='dollar'; }
-		if ($num_format=='number') { $num_format='integer'; }
+		//if ($num_format=='number') { $num_format='integer'; }
 
 		if      ($num_format=='string')   $num_format='@';
 		else if ($num_format=='integer')  $num_format='0';
@@ -795,6 +795,7 @@ class XLSXWriter
 		else if ($num_format=='datetime') $num_format='YYYY-MM-DD HH:MM:SS';
 		else if ($num_format=='price')    $num_format='#,##0.00';
 		else if ($num_format=='dollar')   $num_format='[$$-1009]#,##0.00;[RED]-[$$-1009]#,##0.00';
+		else if ($num_format=='number')    $num_format='###0.00';
 		else if ($num_format=='euro')     $num_format='#,##0.00 [$€-407];[RED]-#,##0.00 [$€-407]';
 		$ignore_until='';
 		$escaped = '';
