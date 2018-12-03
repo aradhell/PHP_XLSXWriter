@@ -494,10 +494,10 @@
 			$file->write('</numFmts>');
 
 			$file->write('<fonts count="'.(count($fonts)).'">');
-			$file->write(		'<font><name val="Arial"/><charset val="1"/><family val="2"/><sz val="10"/></font>');
-			$file->write(		'<font><name val="Arial"/><family val="0"/><sz val="10"/></font>');
-			$file->write(		'<font><name val="Arial"/><family val="0"/><sz val="10"/></font>');
-			$file->write(		'<font><name val="Arial"/><family val="0"/><sz val="10"/></font>');
+			$file->write(		'<font><name val="Calibri"/><charset val="1"/><family val="2"/><sz val="8"/></font>');
+			$file->write(		'<font><name val="Calibri"/><family val="0"/><sz val="10"/></font>');
+			$file->write(		'<font><name val="Calibri"/><family val="0"/><sz val="10"/></font>');
+			$file->write(		'<font><name val="Calibri"/><family val="0"/><sz val="10"/></font>');
 
 			foreach($fonts as $font) {
 				if (!empty($font)) { //fonts have 4 empty placeholders in array to offset the 4 static xml entries above
@@ -798,7 +798,7 @@
 			else if ($num_format=='dollar')   $num_format='[$$-1009]#,##0.00;[RED]-[$$-1009]#,##0.00';
 			else if ($num_format=='number')    $num_format='###0.00';
 			else if ($num_format=='currency_rnd')    $num_format='#,##0.00';
-			else if ($num_format=='currency_red')    $num_format='#,##0.00_);[Red](#,##0.00)';
+			else if ($num_format=='currency_red')    $num_format='#,##0.00);[Red](#,##0.00)';
 			else if ($num_format=='euro')     $num_format='#,##0.00 [$€-407];[RED]-#,##0.00 [$€-407]';
 			$ignore_until='';
 			$escaped = '';
