@@ -798,7 +798,7 @@
 			else if ($num_format=='dollar')   $num_format='[$$-1009]#,##0.00;[RED]-[$$-1009]#,##0.00';
 			else if ($num_format=='number')    $num_format='###0.00';
 			else if ($num_format=='currency_rnd')    $num_format='#,##0.00';
-			else if ($num_format=='currency_red')    $num_format='#,##0.00);[Red](#,##0.00)';
+			else if ($num_format=='currency_red')    $num_format='#,##0.00;[Red](#,##0.00)';
 			else if ($num_format=='euro')     $num_format='#,##0.00 [$€-407];[RED]-#,##0.00 [$€-407]';
 			$ignore_until='';
 			$escaped = '';
