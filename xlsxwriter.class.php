@@ -387,9 +387,9 @@
 			static $border_style_allowed = array('thin','medium','thick','dashDot','dashDotDot','dashed','dotted','double','hair','mediumDashDot','mediumDashDotDot','mediumDashed','slantDashDot');
 			static $horizontal_allowed = array('general','left','right','justify','center');
 			static $vertical_allowed = array('bottom','center','distributed','top');
-			$default_font = array('size'=>'10','name'=>'Arial','family'=>'2');
+			$default_font = array('size'=>'8','name'=>'Calibri','family'=>'5');
 			$fills = array('','');//2 placeholders for static xml later
-			$fonts = array('','','','');//4 placeholders for static xml later
+			$fonts = array('','','','', '');//4 placeholders for static xml later
 			$borders = array('');//1 placeholder for static xml later
 			$style_indexes = array();
 			foreach($this->cell_styles as $i=>$cell_style_string)
@@ -447,6 +447,7 @@
 					if ($style['font']=='Comic Sans MS') { $font['family']=4; }
 					if ($style['font']=='Times New Roman') { $font['family']=1; }
 					if ($style['font']=='Courier New') { $font['family']=3; }
+					if ($style['font']=='Calibri') { $font['family']=5; }
 					$font['name'] = strval($style['font']);
 				}
 				if (isset($style['font-style']) && is_string($style['font-style']))
