@@ -25,6 +25,8 @@
 		protected $cell_styles = array();
 		protected $number_formats = array();
 
+		protected $defaultFontSize = 8;
+
 		public function __construct()
 		{
 			if(!ini_get('date.timezone'))
@@ -387,7 +389,7 @@
 			static $border_style_allowed = array('thin','medium','thick','dashDot','dashDotDot','dashed','dotted','double','hair','mediumDashDot','mediumDashDotDot','mediumDashed','slantDashDot');
 			static $horizontal_allowed = array('general','left','right','justify','center');
 			static $vertical_allowed = array('bottom','center','distributed','top');
-			$default_font = array('size'=>'8','name'=>'Calibri','family'=>'5');
+			$default_font = array('size'=>$this->getDefaultFontSize(),'name'=>'Calibri','family'=>'5');
 			$fills = array('','');//2 placeholders for static xml later
 			$fonts = array('','','','', '');//4 placeholders for static xml later
 			$borders = array('');//1 placeholder for static xml later
@@ -887,6 +889,23 @@
 
 			return $days + $seconds;
 		}
+
+        /**
+         * @return int
+         */
+        public function getDefaultFontSize()
+        {
+            return $this->defaultFontSize;
+        }
+
+        /**
+         * @param int $defaultFontSize
+         */
+        public function setDefaultFontSize($defaultFontSize)
+        {
+            $this->defaultFontSize = $defaultFontSize;
+        }
+
 		//------------------------------------------------------------------
 	}
 
@@ -966,6 +985,8 @@
 			return preg_match("//u", $string) ? true : false;
 		}
 	}
+
+
 
 
 
