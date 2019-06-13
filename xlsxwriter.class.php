@@ -496,7 +496,7 @@
 			$file->write('</numFmts>');
 
 			$file->write('<fonts count="'.(count($fonts)).'">');
-			$file->write(		'<font><name val="Calibri"/><charset val="1"/><family val="2"/><sz val="8"/></font>');
+			$file->write(		'<font><name val="Calibri"/><charset val="1"/><family val="2"/><sz val="'.$this->getDefaultFontSize().'"/></font>');
 			$file->write(		'<font><name val="Calibri"/><family val="0"/><sz val="10"/></font>');
 			$file->write(		'<font><name val="Calibri"/><family val="0"/><sz val="10"/></font>');
 			$file->write(		'<font><name val="Calibri"/><family val="0"/><sz val="10"/></font>');
